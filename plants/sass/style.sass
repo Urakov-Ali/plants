@@ -1,0 +1,929 @@
+$inika: 'inika', sans-serif
+$inter: 'inter', sans-serif
+
+$orange: #E06733
+$green: #499A18
+    
+    
+@mixin button
+    margin-left: 38px
+    font-size: 20px
+    color: $orange
+    width: 161px
+    height: 50px
+    border: 1px solid $orange
+    border-radius: 5px
+    cursor: pointer
+    transition: all 0.5s ease
+
+#blur_effect
+    filter: blur(1px)
+
+*
+    margin:0
+    box-sizing: border-box
+    
+html 
+    scroll-behavior: smooth
+
+.container 
+    margin: 0 auto
+    max-width: 1440px
+    position: relative
+
+header, .welcome 
+    background-color: #EDF2EC
+
+.header_logo
+    display: flex
+    justify-content: flex-start
+    font-family: $inika
+    height: 21px
+    align-items: end
+    cursor: pointer
+    .logo_text
+        font-weight: 400
+        font-size: 16px
+        height: 17px
+        
+.header_wrapper
+    padding: 52px 109px  42px 111px 
+    display: grid
+    grid-template-columns: auto auto
+.header_burger
+    display: none
+.menu
+    display: flex
+    justify-content: space-between
+    list-style-type: none
+    .menu_item
+        padding-left: 46px
+        .menu_link.active
+            color:$orange
+        .menu_link
+            color: #010201
+            text-decoration: none
+            font-family: $inika
+            font-size: 16px
+            font-weight: 400
+            transition: 0.5s ease
+        .menu_link:hover
+            color: $orange
+.welcome 
+    box-sizing: border-box
+.welcome_wrapper 
+    padding: 1px 109px
+    display: flex
+    justify-content: space-between
+    transition: all 0.5s ease
+
+    .leafs
+        margin-top: 62px
+        width: 420px
+        height: 408px
+    
+    .welcome_text_block
+        width: 550px
+        height: 340px
+        margin-top: 74px
+        margin-bottom: 94px
+        vertical-align: top
+
+        font-family: $inter
+        color: #717171
+        .welcome_header h1 
+            font-size: 45px
+            font-weight: 700
+        .welcome_header span
+            color: $green
+        .welcome_content
+            width: 525px
+        .welcome_content p
+            margin-top: 42px
+            font-size: 20px
+            font-weight: 400
+            line-height: 35px
+            width: 525px
+        .welcome_button button
+            font-size: 16px
+            margin-top: 48px
+            width: 158px
+            height: 44px
+            border: 3px solid $orange
+            border-radius: 10px
+            cursor: pointer
+            transition: all 0.5s ease
+        .welcome_button button:hover
+            background-color: $orange
+            color: #fff
+
+.about .about_wrapper
+        padding: 93.5px 109px
+        display: flex
+        justify-content: space-between
+        .about_text_block
+            margin-top: 68px
+            width: 605px
+            height: 350px
+            .about_header h2
+                color: $green
+                padding-right: 142px
+                font-family: $inika
+                font-size: 40px
+                font-weight: 400
+                line-height: 52px
+            .about_header h2 span
+                color: $orange
+            .about_content p 
+                margin-top: 40px
+                font-family: $inter
+                color: #636060
+                font-size: 20px
+                line-height: 30px
+                font-weight: 400
+        .about_img
+            width: 464px
+            height: 480px
+
+.service
+    background-color: #EDF2EC
+    .services_content_wrapper
+        padding-top: 40px
+        width: 1007px
+        display: flex
+        justify-content: space-between
+        .service_header
+            margin-left: 109px
+            margin-right: 70px
+        .service_header h2
+            font-family: $inika
+            width: 306px
+            height: 94px
+            font-size: 40px
+            font-weight: 400
+            line-height: 52px
+            color: $green
+        .service_buttons
+            width: 559px
+            margin-top: 29px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .button
+                @include button
+                margin: 0
+            .button:hover
+                background-color: $orange
+                color: #fff
+    .grid_services
+        display: grid
+        padding: 90px 109px 121px 109px
+        grid-template-columns: auto auto auto
+        .grid_item.blurred
+            filter: blur(1px)
+        .grid_item
+            margin-bottom: 55px
+            .item_content
+                text-align: center
+                margin-top: -5px
+                width: 328px
+                border: 1px solid #E3E1D5
+                border-radius: 0px 0px 20px 20px
+            .item_content h3
+                margin-top: 10px 
+                font-family: $inter
+                font-size: 20px
+                font-weight: 700
+                color: $orange
+            .item_content p 
+                margin-top: 10px
+                margin-bottom: 36px
+                font-family: $inter
+                font-size: 16px
+                color: #717171
+.prices
+    font-family: $inter
+    .price_wrapper
+        display: flex
+        justify-content: space-between
+        padding: 40px 109px 115px 109px
+        .price_accordion h2 
+            font-size: 40px
+            font-weight: 700
+        .price_content h3
+            text-align: right
+            width: 452px
+            font-size: 40px
+            font-weight: 700
+            line-height: 50px
+            color: #000
+        .price_content h3 span
+            color: $green
+        .price_button
+            float: right
+            margin-top: 38px
+            @include button
+            background-color: #fff
+        .price_button:hover
+            background-color: $orange
+            color: #fff
+        .price_img
+            float: right
+            padding-top: 40px
+            width: 152px
+            height: 174px
+    .accordion
+        margin-top: 60px
+        padding: 34px 41px
+        font-family:$inter
+        border: 1px solid #E3E1D5
+        border-radius: 20px
+        .contentBx:first-child
+            margin-top: 0
+        .contentBx
+            margin-top: 32px
+            width: 250px
+            height: 50px
+            background-color: #EDF2EC
+            border: 1px solid #EDF2EC
+            border-radius: 20px
+            transition: 0.5s ease-in-out
+            .label
+                display: flex
+                justify-content: space-between
+                margin-left: 40px
+                margin-top: 16px
+                font-size: 20px
+                font-weight: 700
+                cursor: pointer
+            .ellipse
+                margin-top: 2px
+                margin-right: 40px
+                background-color: #D9D9D9
+                border-radius: 50%
+                width: 16px
+                height: 16px
+        .contentBx .content
+                height: 0
+                overflow: hidden
+                transition: 0.5s ease
+                
+        .contentBx.active 
+                height: 154px
+                background-color: #D6E7D2
+                .content
+                    margin:0 auto
+                    width: 170px
+                    border-top: 0.5px solid #AEA1A1
+                    margin-top:12px
+                    height: 100%
+                .content p
+                    margin-top: 6px
+                    font-weight: 300
+                    font-size: 10px
+                    line-height: 10px
+                .price
+                    margin-top: 7px
+                    font-weight: 400
+                    font-size: 12px
+                .price span:first-child
+                    font-weight: 400
+                    font-size: 10px
+                .price span
+                    color: $orange
+                    font-weight: 700
+                .order_button
+                    margin-top: 12px
+                    width: 86px
+                    height: 25px
+                    border-radius: 10px
+                    border-style: none
+                    color: #717171
+                    font-weight: 700
+                    font-size: 14px
+                    line-height: 20px
+.contacts
+    background-color: #EDF2EC
+.contacts h2 
+    display: inline-block
+    position: relative
+    top: 60px
+    left:622px
+    font-family: $inika
+    font-weight: 700
+    font-size: 40px
+    color: $green
+.contacts_wrapper
+    padding: 0px 109px 
+    display: flex
+    justify-content: space-between
+    .contacts_img img
+        width: 400px
+        height: 500px
+    .dropdown_btn_wrapper.active
+        background-color: #C1E698
+    .dropdown_btn_wrapper
+        cursor: pointer
+        margin-top: 148px
+        width: 450px
+        height: 50px
+        background-color: #D6E7D2
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        display: flex
+        justify-content: space-between
+        .contacts_dropdown
+            color: #717171
+            font-family: $inter
+            font-weight: 400
+            font-size: 20px
+            margin: auto 0 auto 20px
+        .dropdown_btn
+            background-color: #AEA1A1
+            border-radius: 50%
+            width: 16px
+            height: 16px
+            margin: auto 35px auto 0
+    .dropdown_btn_content
+            height: 0
+            overflow: hidden
+            transition: 0.5s ease-in-out
+    .dropdown_btn_content.active
+            height: fit-content
+            padding: 27px 35px 31px 35px
+            background-color: #DCE9D9
+    .dropdown_btn_content p
+            margin-top: 15px 
+            font-family: $inter
+            font-size: 16px
+            font-weight: 400
+            color: $green
+            cursor: pointer
+    .dropdown_btn_content p:first-child
+            padding-top: 0
+    .dropdown_btn_content p:hover 
+            color: #717171
+            border-bottom: 1px solid #717171
+    .contacts_city_info
+        display: none
+    .contacts_city_info.active
+        margin-top: 47px
+        display: block
+        background-color: #EDF2EC
+        width: 448px
+        border: 1px solid #000
+        border-radius: 20px
+        padding: 17px 76px 32px 33px
+        .contact_content
+            display: grid
+            grid-template-columns: auto auto 
+            grid-template-rows: auto auto auto
+        .content-1
+            padding-top: 10px
+            font-family: 'Inter'
+            font-weight: 400
+            font-size: 16px
+            color: #000
+        .content-2
+            padding-top: 10px
+            font-family: 'Inter'
+            font-weight: 400
+            font-size: 16px
+            color: #717171
+    .contacts_button
+        width: 122px
+        height: 26px
+        border: 1px solid $orange
+        border-radius: 5px
+        margin: 24px auto auto 150px
+
+        font-family: $inika
+        font-weight: 700
+        font-size: 10px
+        text-align: center
+        color: #717171
+        transition: all 0.5s ease
+        cursor: pointer
+    .contacts_button:hover
+        background-color: $orange
+        color: #fff
+
+.footer_flex
+    padding: 40px 109px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .github, .github a
+        font-family: $inter
+        font-weight: 400
+        font-size: 20px
+        color: black
+        text-decoration: none
+        transition: all 0.5s ease
+    .github a:hover
+        color:$orange
+    .rolling_scopes a
+        font-family: $inter
+        font-weight: 400
+        font-size: 20px
+        color: #000
+        text-decoration: none
+        transition: all 0.5s ease
+    .rolling_scopes a:hover 
+        color:$orange
+    ul li
+        display: inline
+        margin-left: 20px
+        transition: all 0.5s ease
+    ul li:hover
+        border-bottom: 1px solid #000
+    ul li:first-child
+        padding-left: 0
+
+// media queries
+@media screen and (max-width: 1250px)
+    .container
+        width: 892px
+    .welcome_wrapper
+        padding: 0 0 30px
+        gap: 30px
+        .leafs
+            width: 380px
+            height: 368px
+        .welcome_text_block
+            width: 450px
+            .welcome_content
+                width: 450px
+            .welcome_content p
+                display: inline-block
+                width: 450px
+    .about .about_wrapper
+        box-sizing: content-box
+        width: 605px
+        flex-direction: column
+        margin: 0 auto
+        padding: 40px 0 95px 
+        .about_text_block .about_header h2
+            margin:0 auto
+            padding: 0
+            text-align: left
+        .about_img
+            margin: 0 auto
+    .service .services_content_wrapper
+        width: 560px
+        flex-direction: column
+        .service_header
+            margin: 0
+            display: inline-flexbox
+            width: 310px
+        .service_buttons
+            margin:40px 0 40px
+    .service .grid_services
+            padding: 0 0 40px
+            grid-template-columns: repeat(2, 330px)
+            column-gap: 120px
+            row-gap:38px
+            .grid_item
+                height: 450px
+                margin: 0 
+                .item_content, .item_img
+                    width: 100%
+                .item_img
+                    height: 350px
+                .item_content p
+                    width: 201px
+                    padding: 10px 0 18px
+                    margin: 0 auto
+    .prices .price_wrapper 
+        padding: 40px 0 95px 0
+        .price_accordion h2
+            margin-left: 16px
+            font-size: 35px
+        .price_content 
+            width: 296px
+            margin-top: 99px
+        .price_content h3
+            width: 296px
+            font-size: 25px
+            line-height: 35px
+        .price_button
+            margin: 28px 0 34px
+        .price_img
+            width: auto
+            padding: 0
+    .contacts h2
+        top:40px
+        left:350px
+    .contacts_wrapper
+        padding-top: 142px 
+        padding-left: 111px
+        flex-direction: column
+        .contacts_img
+            width: 200px
+            height: 248px 
+            margin: 250px auto 0 auto
+            order: 1
+        .dropdown_btn_wrapper
+            margin: 0 auto
+    .footer_flex
+        flex-direction: column
+        width: 210px
+        padding: 33px 0 33px
+        margin: 0 auto
+        gap: 16px
+    .footer_flex ul
+        padding: 0
+    .footer_flex ul li:first-child
+        margin-left: 14px
+    .footer_flex ul li
+        margin-left: 20px          
+@media screen and (max-width: 992px)
+    .container
+        width: 668px
+    .header_wrapper
+        padding: 33px 0px
+        margin: 0 auto
+        justify-content: space-between
+        width: 668px
+        .header_logo
+            height: 50px
+            align-items: center
+        .menu 
+            padding: 0
+            height: 50px
+            align-items: center
+        .menu .menu_item:first-child
+            padding-left: 0
+        .menu .menu_item .menu_link
+            font-weight: 700
+    .welcome_wrapper 
+        padding: 40px 0px 0px 0px
+        .leafs
+            order: 1
+            width: 280px
+            height: 254px
+            margin-top: 0
+        .welcome_text_block
+            position: relative
+            margin-top: 0
+            margin-bottom: 70px
+            width: 346px
+            height: 310px
+            .welcome_header h1
+                margin: 0
+                font-size: 35px
+                line-height: 50px
+            .welcome_content
+                width: 346px 
+            .welcome_content p
+                margin-top: 30px
+                display: inline-block
+                width: 346px 
+                font-size: 16px
+                line-height: 25px
+            .welcome_button button
+                margin-top: 35px
+    .about .about_wrapper
+        width: 668px
+        margin:0
+        .about_text_block
+            width: 668px
+            margin: 0
+            .about_header h2
+                padding-bottom: 12px
+                width: 423px
+                text-align: center
+                font-size: 35px
+                line-height: 45px
+            .about_content p
+                margin-top: 40px
+        .about_img
+            margin: 40px auto 0px
+            width: 250px
+            height: 258px
+    .service 
+        padding-bottom: 70px
+        .services_content_wrapper
+            padding-top:60px 
+            .service_header
+                margin: 0
+            .service_header h2 
+                font-size: 35px
+                line-height: 45px
+        .grid_services
+            grid-template-columns: repeat(2, 281px)
+            padding: 0
+    .prices .accordion .contentBx 
+        .label
+            margin-left: 30px
+        .ellipse
+            margin-right: 30px
+    .contacts h2
+        left:238px
+    .contacts_wrapper .contacts_img
+        margin-top: 250px
+        margin-left: 133px
+    .footer_flex .github span
+        margin-left: 20px
+
+@media screen and (max-width: 700px)
+    .container
+        width: 476px
+    .header_wrapper
+        width: 476px
+        .header_burger
+            display: block
+            position: relative
+            width: 40px
+            height: 25px
+        .header_burger span
+            position: absolute
+            background-color: #717171
+            width: 100%
+            height: 2px
+            top: 8px
+            right: 0
+            transition: all 0.5s ease
+        .header_burger span:nth-child(1)
+            position: absolute
+            background-color: #717171
+            width: 100%
+            height: 2px
+            top: 16px
+        .header_burger:before,
+        .header_burger:after
+            content: ''
+            position: absolute
+            background-color: #717171
+            width: 100%
+            height: 2px
+            right: 0
+            transition: all 0.5s ease
+        .header_burger:before
+            top:0
+        .header_burger:after
+            bottom: 0
+        .header_burger.active:before
+            width: 80%
+        .header_burger.active:after
+            width: 80%
+        .header_burger.active span
+            width: 60%
+        .menu
+            display: grid
+            grid-template-columns: auto auto auto
+            width: 100%
+            position: absolute
+            top: 63px
+            left: -600px
+            transition: all 0.5s ease
+            .menu_item:nth-child(4)
+                padding-left: 0px
+            .menu_item
+                padding-top: 10px
+                .menu_link
+                    font-size: 16px
+                    font-weight: 400
+        .menu.active
+            left: 0
+            top: 90px
+            z-index: 2
+    .welcome_wrapper.active
+        padding-top: 60px 
+    .welcome_wrapper 
+        .leafs
+            display: none
+        .welcome_text_block .welcome_content
+                width: 450px
+        .welcome_text_block .welcome_content p
+                width: 450px
+    .about .about_wrapper
+        width: 476px 
+        .about_text_block 
+            width: 476px
+            .about_header 
+                width: 100%
+            .about_header h2 
+                margin: 0
+            .about_content 
+                width: 100%
+            .about_content p
+                width: 100%
+    .service 
+        .services_content_wrapper
+            width: 476px 
+            .service_buttons
+                display: inline-block
+                width: 252px
+                height: 80px
+                .button
+                    width: 121px
+                    height: 35px
+                .button:nth-child(2)
+                    float: right
+                .button:nth-child(3)
+                    margin-top: 9px
+        .grid_services
+            grid-template-columns: repeat(1, 281px)
+    .prices
+        .accordion
+            box-sizing: border-box
+            width: 224px
+            padding: 29px 22px
+            margin: 40px auto 20px auto
+            .contentBx
+                width: 180px
+        .price_wrapper
+            flex-direction: column
+            padding: 25px 0 40px
+            .price_accordion h2
+                font-size: 25px
+                font-weight: 700
+                margin: 0 
+                text-align: center
+            .price_content
+                margin: 0 auto
+            .price_content h3
+                text-align: center
+            .price_img 
+                display: none
+            .price_button
+                margin: 14px 56px 0 0
+    .contacts h2
+        position: absolute
+        left: 132px
+    .contacts_wrapper
+        padding: 139px 0 0
+        .dropdown_btn_wrapper
+            width: 300px
+            margin:0 auto
+        .dropdown_btn_content
+            width: 300px
+            margin:0 auto 132px
+        .dropdown_btn_content.off-margin
+            margin:0
+        .contacts_city_info.active
+            width: 300px
+            margin: 40px auto 14px
+            padding: 30px
+        .contacts_button
+            margin: 25px 0 0 50px
+        .contacts_img
+            margin: 0 auto
+@media screen and (max-width: 577px)
+    .header_burger
+        padding-top: 20px
+@media screen and (max-width: 576px)
+    .container
+        width: 330px
+    .header_burger
+        margin-top: 32px
+    .header_wrapper
+        width: 330px
+        padding: 0
+        height: 90px
+        .header_logo
+            margin-top: 10px
+            align-items: end
+    .welcome_wrapper.active
+        padding-top: 80px
+    .welcome_wrapper
+        padding-top: 30px
+        .welcome_text_block 
+            .welcome_header h1
+                font-size: 25px
+                line-height: 35px
+            .welcome_content
+                width: 320px
+            .welcome_content p
+                margin-top: 20px
+                width: 320px
+    .welcome_wrapper .welcome_text_block
+        height: 270px
+        margin: 0
+        .welcome_button button
+            width: 100px
+            height: 34px
+            margin-top: 20px
+            font-size: 10px
+    .about .about_wrapper
+        padding-top: 30px 
+        .about_text_block .about_header
+            width: 288px 
+            margin: 0 auto 
+    .about .about_wrapper .about_text_block .about_header h2
+        padding: 0
+        line-height: 32px
+        width: 288px  
+
+        font-size: 25px
+    .about .about_wrapper 
+        width: 330px
+        padding: 30px 0
+        .about_img
+            margin: 0 auto
+            width: 150px
+            height: 150px
+        .about_text_block
+            width: 330px
+            height: auto
+            padding: 0  
+            .about_content
+                width: 330px
+                margin: 0 auto
+            .about_content p
+                width: 330px
+                margin-top: 18px
+
+                font-size: 15px
+                line-height: 25px
+    .service 
+        padding-bottom: 20px
+        .services_content_wrapper
+            padding-top: 30px
+            width: 100%
+            .service_header h2
+                width: 187px
+                height: 69px
+                font-size: 25px
+                line-height: 32px
+            .service_buttons
+                margin: 35px 0 40px
+        .grid_services
+            margin-left: 25px
+    .prices 
+        .price_wrapper 
+            padding: 25px 0 35px
+            .price_content
+                width: 230px
+            .price_content h3
+                width: 100%
+                height: 77px
+                font-size: 20px
+                line-height: 35px
+            .price_button
+                width: 121px
+                height: 35px
+
+                font-size: 15px
+                line-height: 20px
+        .accordion
+            margin-top: 35px
+            height: 235px
+            .contentBx
+                margin-top: 13px
+                .label
+                    margin-left: 30px
+                    font-size: 15px
+                    line-height: 20px
+    .contacts h2
+        font-size: 25px
+        top: 25px
+        left: 104px
+    .contacts_wrapper 
+        .dropdown_btn_wrapper .dropdown_btn
+            margin-right: 20px
+        .contacts_img
+            width: 100px
+            height: 125px
+    .footer_flex
+        padding: 22px 0
+        gap: 10px
+    .footer_flex ul 
+        padding-top: 5px
+        text-align: center
+        margin-right: 5px
+
+@media screen and (max-width: 330px)
+    .container
+        width: 300px
+    .header_wrapper
+        width: 100%
+    .about .about_wrapper
+        width: 100%
+        .about_text_block
+            width: 100%
+    .about .about_wrapper .about_text_block .about_content 
+        width: 100%
+    .about .about_wrapper .about_text_block .about_content p
+        width: 100%
+    .welcome_text_block .welcome_content 
+        max-width: 300px
+    .welcome_text_block .welcome_content p
+        max-width: 300px
+
+
+        
+
+
+            
+
+
+
+        
+            
+            
+
+
+
+        
+
